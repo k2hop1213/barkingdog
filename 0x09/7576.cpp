@@ -1,10 +1,10 @@
 #include <stdc++.h>
 using namespace std;
 #define X first
-#define Y second // pair¿¡¼­ first, second¸¦ ÁÙ¿©¼­ ¾²±â À§ÇØ¼­ »ç¿ë
+#define Y second // pairì—ì„œ first, secondë¥¼ ì¤„ì—¬ì„œ ì“°ê¸° ìœ„í•´ì„œ ì‚¬ìš©
 int board[1002][1002];
 int dx[4] = { 1,0,-1,0 };
-int dy[4] = { 0,1,0,-1 }; // »óÇÏÁÂ¿ì ³× ¹æÇâÀ» ÀÇ¹Ì
+int dy[4] = { 0,1,0,-1 }; // ìƒí•˜ì¢Œìš° ë„¤ ë°©í–¥ì„ ì˜ë¯¸
 int main(void) {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
@@ -23,10 +23,10 @@ int main(void) {
 	while (!Q.empty()) {
 		pair<int, int> cur = Q.front(); Q.pop();
 		int dis = board[cur.X][cur.Y];
-		for (int dir = 0; dir < 4; dir++) { // »óÇÏÁÂ¿ì Ä­À» »ìÆìº¼ °ÍÀÌ´Ù.
+		for (int dir = 0; dir < 4; dir++) { // ìƒí•˜ì¢Œìš° ì¹¸ì„ ì‚´í´ë³¼ ê²ƒì´ë‹¤.
 			int nx = cur.X + dx[dir];
-			int ny = cur.Y + dy[dir]; // nx, ny¿¡ dir¿¡¼­ Á¤ÇÑ ¹æÇâÀÇ ÀÎÁ¢ÇÑ Ä­ÀÇ ÁÂÇ¥°¡ µé¾î°¨
-			if (nx < 0 || nx >= n || ny < 0 || ny >= m) continue; // ¹üÀ§ ¹ÛÀÏ °æ¿ì ³Ñ¾î°¨
+			int ny = cur.Y + dy[dir]; // nx, nyì— dirì—ì„œ ì •í•œ ë°©í–¥ì˜ ì¸ì ‘í•œ ì¹¸ì˜ ì¢Œí‘œê°€ ë“¤ì–´ê°
+			if (nx < 0 || nx >= n || ny < 0 || ny >= m) continue; // ë²”ìœ„ ë°–ì¼ ê²½ìš° ë„˜ì–´ê°
 			if (board[nx][ny] == 0) {
 				board[nx][ny] = dis + 1;
 				Q.push({ nx,ny });
