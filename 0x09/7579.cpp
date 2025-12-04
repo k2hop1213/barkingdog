@@ -51,7 +51,7 @@ int main(void) {
 
 
 			if (board[nh][nn][nm] == 0) {
-				board[nh][nn][nm] = day + 1; // ÀÍ´Â µ¥ °É¸° ½Ã°£ ±â·Ï
+				board[nh][nn][nm] = day + 1; // Ã€ÃÂ´Ã‚ ÂµÂ¥ Â°Ã‰Â¸Â° Â½ÃƒÂ°Â£ Â±Ã¢Â·Ã
 				Q.push({ nh, nn, nm });
 			}
 		}
