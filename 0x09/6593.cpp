@@ -53,7 +53,7 @@ int main() {
 					cout << "Escaped in " << dis[nx][ny][nz] << " minute(s).\n";
 					t = 1;
 					while (!Q.empty()) Q.pop();
-					goto end_loop; // ÀÌÁß ·çÇÁ Å»ÃâÀ» À§ÇØ goto »ç¿ë ¶Ç´Â ÇÃ·¡±×/ÇÔ¼ö »ç¿ë
+					goto end_loop; // ì´ì¤‘ ë£¨í”„ íƒˆì¶œì„ ìœ„í•´ goto ì‚¬ìš© ë˜ëŠ” í”Œë˜ê·¸/í•¨ìˆ˜ ì‚¬ìš©
 				}
 				Q.push({ nx,ny,nz });
 
