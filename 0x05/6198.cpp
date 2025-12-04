@@ -22,13 +22,13 @@ int main() {
 	for (int i = 1; i <= n; i++) {
 		long long temp = a2.top();
 		a2.pop();
-		if (i == 1) { // ÃÊ±â°ª ¼³Á¤, ¸Ç ¾Õ °Ç¹°Àº ¾Æ¹«°Íµµ º¿º½
+		if (i == 1) { // ì´ˆê¸°ê°’ ì„¤ì •, ë§¨ ì•ž ê±´ë¬¼ì€ ì•„ë¬´ê²ƒë„ ë´‡ë´„
 			max = temp;
 
 		}
 		else {
 			if (max >= temp) {
-				if (a.top() >= temp) { // ¹Ù·Î ¾Õ¿¡ ÀÖ´Â°Ô Å¬¶§´Â ¾Æ¹«°Íµµ º¼ ¼ö  ¾øÀ½
+				if (a.top() >= temp) { // ë°”ë¡œ ì•žì— ìžˆëŠ”ê²Œ í´ë•ŒëŠ” ì•„ë¬´ê²ƒë„ ë³¼ ìˆ˜  ì—†ìŒ
 
 				}
 				else {
@@ -36,12 +36,12 @@ int main() {
 						a.pop();
 						a1.pop();
 					}
-					res += (i - a1.top() - 1); //ÇöÀç °Ç¹°°ú ÇöÀç°Ç¹°º¸´Ù Å« °Ç¹° »çÀÌ¿¡ ¸î°³°¡ ÀÖ´ÂÁö
+					res += (i - a1.top() - 1); //í˜„ìž¬ ê±´ë¬¼ê³¼ í˜„ìž¬ê±´ë¬¼ë³´ë‹¤ í° ê±´ë¬¼ ì‚¬ì´ì— ëª‡ê°œê°€ ìžˆëŠ”ì§€
 				}
 
 
 			}
-			else { // ÇöÀç ¼ö°¡ ÃÖ´ñ°ªÀÌ¸é ¾Õ¿¡ ÀÖ´Â ¸ðµç °Ç¹°À» º¼ ¼ö ÀÖÀ½
+			else { // í˜„ìž¬ ìˆ˜ê°€ ìµœëŒ“ê°’ì´ë©´ ì•žì— ìžˆëŠ” ëª¨ë“  ê±´ë¬¼ì„ ë³¼ ìˆ˜ ìžˆìŒ
 				res += (i - 1);
 				max = temp;
 			}
